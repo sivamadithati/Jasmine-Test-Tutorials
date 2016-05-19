@@ -2,7 +2,7 @@ module.exports = function(config){
   config.set({
 
     basePath : '',
-    reporters: ['coverage'],
+    reporters: ['progress' , 'coverage'],
     preprocessors: {
       'app/views/jasmineDirective.html': ['ng-html2js'],
       'app/**/*.js': ['coverage']
