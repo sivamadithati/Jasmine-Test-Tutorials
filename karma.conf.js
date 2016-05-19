@@ -2,7 +2,7 @@ module.exports = function(config){
   config.set({
 
     basePath : '',
-    reporters: ['progress' , 'coverage'],
+    reporters: ['progress' , 'coverage', 'html', 'kjhtml'],
     preprocessors: {
       'app/views/jasmineDirective.html': ['ng-html2js'],
       'app/**/*.js': ['coverage']
@@ -35,7 +35,9 @@ module.exports = function(config){
             'karma-jasmine',
             'karma-junit-reporter',
         'karma-ng-html2js-preprocessor',
-        'karma-coverage'
+        'karma-coverage',
+        'karma-jasmine-html-reporter',
+		'karma-html-reporter'
             ]
   });
 };
