@@ -24,6 +24,8 @@ module.exports = function(config){
     ],
 
     autoWatch : true,
+    
+    singlerun : true,
 
     frameworks: ['jasmine'],
 
