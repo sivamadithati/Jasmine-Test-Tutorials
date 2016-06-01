@@ -10,16 +10,24 @@
         vm.sampleAjaxCall = sampleAjaxcall;
         vm.sample = "";
         vm.bool = true;
+        function init(){
+            jasmineService.sampleAjaxCall().then(function(response){
+                    vm.header = response.header;
+                }
+            );
+        }
         function sampleAjaxcall(){
             jasmineService.sampleAjaxCall().then(function(response){
                     vm.header = response.header;
                 }
             );
         }
-        function sampleTest(string, bool){
+        function sampleTest(){
+
             vm.sample = "This is Hello World test case!!!";
             vm.bool = false;
         }
+
         function sampleNumber(value){
             return value;
         }
@@ -29,5 +37,6 @@
                     vm.header = response.data.header;
                 });
         }
+//init();
     }
 })();
